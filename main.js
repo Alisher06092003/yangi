@@ -20,3 +20,18 @@ async function handleGroupCreation() {
     }
 }
 
+// Serverdan javobni qayta ishlash
+async function handleResponse(response) {
+    const rawData = await response.text();
+    let data;
+    try {
+        data = JSON.parse(rawData);
+    } catch (error) {
+        console.error("❌ Server noto‘g‘ri JSON qaytardi!");
+        alert("❌ Server noto‘g‘ri javob qaytardi!");
+        return;
+    }
+
+    alert(`✅ Guruh yaratildi: ${data.message}`);
+}
+
