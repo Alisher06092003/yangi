@@ -35,3 +35,12 @@ async function handleResponse(response) {
     alert(`✅ Guruh yaratildi: ${data.message}`);
 }
 
+// Guruh yaratish uchun kerakli inputni tekshirish
+function validateInput(groupName) {
+    if (!groupName) {
+        alert("❌ Guruh nomini kiritishingiz kerak!");
+        return false; // Noto‘g‘ri bo‘lsa, false qaytaradi
+    }
+    return true; // To‘g‘ri bo‘lsa, true qaytaradi
+}
+
