@@ -7,4 +7,16 @@ loadStudents();
 async function handleGroupCreation() {
     const groupName = groupNameInput.value.trim();
 
-   
+    if (!validateInput(groupName)) return; // Agar guruh nomi noto‘g‘ri bo‘lsa, funksiyani to‘xtat
+
+    try {
+        const response = await createGroup(groupName);
+        await handleResponse(response);
+        groupNameInput.value = ""; // Inputni tozalash
+        loadGroups(); // Ro'yxatni yangilash
+    } catch (error) {
+        console.error("❌ Xatolik:", error);
+        alert("❌ Guruh yaratishda muammo yuz berdi!");
+    }
+}
+
