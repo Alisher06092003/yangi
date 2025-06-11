@@ -35,5 +35,6 @@ async function handleResponse(response) {
     alert(`✅ Guruh yaratildi: ${data.message}`);
 }
 
-
-
+// Guruh yaratish uchun kerakli 
+function validateInput(groupName) {
+   
