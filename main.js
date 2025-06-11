@@ -32,5 +32,8 @@ async function handleResponse(response) {
         return;
     }
 
-    
+    alert(`✅ Guruh yaratildi: ${data.message}`);
+}
+
+
 
