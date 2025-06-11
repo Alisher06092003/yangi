@@ -37,4 +37,5 @@ async function handleResponse(response) {
 
 // Guruh yaratish uchun kerakli 
 function validateInput(groupName) {
-   
+    if (!groupName) {
+       
