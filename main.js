@@ -26,4 +26,11 @@ async function handleResponse(response) {
     let data;
     try {
         data = JSON.parse(rawData);
-   
+    } catch (error) {
+        console.error("❌ Server noto‘g‘ri JSON qaytardi!");
+        alert("❌ Server noto‘g‘ri javob qaytardi!");
+        return;
+    }
+
+    
+
