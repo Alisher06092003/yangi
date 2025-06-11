@@ -41,6 +41,6 @@ function validateInput(groupName) {
         alert("❌ Guruh nomini kiritishingiz kerak!");
         return false; // Noto‘g‘ri bo‘lsa, false qaytaradi
     }
-    return true; 
+    return true; // To‘g‘ri bo‘lsa, true qaytaradi
 }
 
