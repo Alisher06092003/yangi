@@ -22,4 +22,7 @@ async function handleGroupCreation() {
 
 // Serverdan javobni qayta ishlash
 async function handleResponse(response) {
+    const rawData = await response.text();
+    let data;
    
+
