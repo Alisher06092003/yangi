@@ -24,5 +24,6 @@ async function handleGroupCreation() {
 async function handleResponse(response) {
     const rawData = await response.text();
     let data;
+    try {
+        data = JSON.parse(rawData);
    
-
