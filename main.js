@@ -20,3 +20,6 @@ async function handleGroupCreation() {
     }
 }
 
+// Serverdan javobni qayta ishlash
+async function handleResponse(response) {
+   
